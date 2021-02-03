@@ -15,6 +15,10 @@ const Styles = StyleSheet.create({
         paddingRight: 10,
         flex: 1
     },
+    cardImg: {
+        width: 112,
+        height: 112
+    },
     commercial: {
         position: 'absolute',
         top: 10,
@@ -47,7 +51,7 @@ const Styles = StyleSheet.create({
     m1: {
         marginTop: 4
     },
-    voterImage: {
+    commentorImage: {
         width: 20,
         height: 20,
         borderRadius: 10,

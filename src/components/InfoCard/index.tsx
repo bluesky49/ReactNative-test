@@ -2,51 +2,54 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { Image } from 'react-native-elements';
 import IconGroup from '../IconGroup';
-import RatingMark from '../Element/RatingMark';
+import ColoredRateStar from '../ColoredRateStar';
 
 import styles from './style';
+import Location from '../../assets/svgComponent/location';
+import User from '../../assets/svgComponent/user';
+import Calendar from '../../assets/svgComponent/currency';
 
 interface InfoCardProps {
   title: string,
-  voter: string,
+  commentor: string,
   location: string,
-  distance: string,
-  rating: string,
+  dist: string,
+  cnt: string,
   date: string,
-  backImage?: any,
+  cardImg?: any,
   userImage?: any
 }
 
 const InfoCard = (props: InfoCardProps) => {
-  const { title, voter, location, distance, rating, date, backImage, userImage } = props
+  const { title, commentor, location, dist, cnt, date, cardImg, userImage } = props;
   return (
     <>
       <View style={styles.root}>
-        <Image source={backImage} style={{ width: 112, height: 112 }} />
+        <Image source={cardImg} style={styles.cardImg} />
         <View style={styles.commercial}>
           <IconGroup />
         </View>
         <View style={styles.rating_mark}>
-          <RatingMark text="11/24" />
+          <ColoredRateStar text="11/24" />
         </View>
         <View style={styles.content}>
-          <Text style={{ ...styles.title, ...styles.bold }}>
+          <Text style={[styles.title, styles.bold]}>
             {title}
           </Text>
-          <View style={{ ...styles.row, ...styles.m1 }}>
-            <Image source={userImage} style={styles.voterImage} />
-            <Text style={{ ...styles.title, ...styles.pl_1 }}>By {voter}</Text>
+          <View style={[styles.row, styles.m1]}>
+            <Image source={userImage} style={styles.commentorImage} />
+            <Text style={[styles.title, styles.pl_1]}>By {commentor}</Text>
           </View>
-          <View style={{ ...styles.row, ...styles.m1 }}>
-            <Feather name="map-pin" size={16} color="#666577" />
-            <Text style={{ ...styles.title, marginLeft: 6 }}>{location}</Text>
-            <Text style={{ ...styles.title, ...styles.gray, marginLeft: 10 }}>{distance}</Text>
+          <View style={[styles.row, styles.m1]}>
+            <Location />
+            <Text style={[styles.title, { marginLeft: 6 }]}>{location}</Text>
+            <Text style={[styles.title, styles.gray, { marginLeft: 10 }]}>{dist}</Text>
           </View>
-          <View style={{ ...styles.row, ...styles.m1 }}>
-            <Feather name="users" size={16} color="#666577" />
-            <Text style={{ ...styles.title, flex: 1, marginLeft: 12 }}>{rating}</Text>
-            <Feather name="calendar" size={16} color="#666577" />
-            <Text style={{ ...styles.title, marginLeft: 14 }}>{date}</Text>
+          <View style={[styles.row, styles.m1]}>
+            <User />
+            <Text style={[styles.title, { flex: 1, marginLeft: 12 }]}>{cnt}</Text>
+            <Calendar />
+            <Text style={[styles.title, { marginLeft: 14 }]}>{date}</Text>
           </View>
         </View>
       </View>
