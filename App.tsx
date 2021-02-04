@@ -9,14 +9,11 @@
  */
 
 import React from 'react';
-import 'react-native-gesture-handler';
-
-declare const global: {HermesInternal: null | {}};
+import NavigationStack from './src/routes'
 
 const App = () => {
   return (
-    <>
-    </>
+    <NavigationStack />
   );
 };
 

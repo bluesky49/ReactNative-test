@@ -9,7 +9,7 @@ import CommentScreen from '../pages/CommentScreen';
 
 const USER_IMAGE = require("../assets/img/user.png")
 
-const Container = () => {
+const NavigationStack = () => {
     const Stack = createStackNavigator();
 
     const HeaderOption = {
@@ -44,4 +44,4 @@ const Container = () => {
     )
 }
 
-export default Container;
+export default NavigationStack;
