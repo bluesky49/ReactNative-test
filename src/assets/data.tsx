@@ -1,7 +1,7 @@
 export const user = {
     image: require('./images/user.png'),
-    firstName: "Brooklyn",
-    lastName: "Simmons",
+    fName: "Brooklyn",
+    lName: "Simmons",
     score: 4.7,
     rating: 128
 }

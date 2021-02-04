@@ -16,7 +16,8 @@ const UserRatingStyle = StyleSheet.create({
     },
     header: {
         flexDirection: 'row',
-        alignItems: 'flex-start'
+        alignItems: 'flex-start',
+        height: 48
     },
     left: {
         flex: 1,
@@ -30,6 +31,7 @@ const UserRatingStyle = StyleSheet.create({
     },
     white: {
         color: 'white',
+        marginLeft: 20
     },
     gray: {
         color: "#666577"
