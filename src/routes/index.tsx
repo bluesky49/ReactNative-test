@@ -7,7 +7,7 @@ import styles from './style';
 import InfoScreen from '../pages/InfoScreen';
 import CommentScreen from '../pages/CommentScreen';
 
-const USER_IMAGE = require("../assets/img/user.png")
+const USER_IMAGE = require("../assets/images/user.png")
 
 const NavigationStack = () => {
     const Stack = createStackNavigator();
@@ -27,7 +27,7 @@ const NavigationStack = () => {
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen
-                    name={`${user.fName}'s Rating`}
+                    name={`Brooklyn's Rating`}
                     component={InfoScreen}
                     options={{
                         ...HeaderOption,
