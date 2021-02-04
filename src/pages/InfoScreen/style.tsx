@@ -7,11 +7,6 @@ const UserRatingStyle = StyleSheet.create({
         paddingRight: 20,
         backgroundColor: '#25233D',
         overflow: 'hidden',
-    },
-    m18: {
-        marginTop: 18
-    },
-    m12: {
         marginTop: 14
     },
     header: {
@@ -22,6 +17,9 @@ const UserRatingStyle = StyleSheet.create({
     left: {
         flex: 1,
         flexDirection: 'row'
+    },
+    rateContainer  :{
+        marginLeft: -6
     },
     score: {
         fontSize: 40,

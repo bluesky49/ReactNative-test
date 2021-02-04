@@ -4,7 +4,7 @@ const ContainerStyle = StyleSheet.create({
     headerImage: {
         width: 24,
         height: 24,
-        marginLeft: 37
+        marginLeft: 20
     }
 })
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, SafeAreaView, FlatList } from 'react-native';
 import styles from './style';
-import { posts, user } from '../../assets/data';
+import { posts } from '../../assets/data';
 import RateStar from '../../components/RateStar';
 import StarRating from '../../components/Rating';
 import InfoCard from './../../components/InfoCard/index';
@@ -10,17 +10,17 @@ const Item = ({ item, navigation }: any) => (
     <View>
         <InfoCard
             title={item.title}
-            commentor={`${user.fName} ${user.lName}`}
+            commentor='Brookylin Simmonds'
             location={item.city}
             cnt={item.rating}
             date={item.date}
             dist={item.distance}
             cardImg={item.backImage}
-            userImage={user.image}
+            userImage={require('../../assets/images/user.png')}
         />
-        <View style={[styles.header, , styles.m12]}>
+        <View style={styles.header}>
             <View style={styles.left}>
-                <View style={{ marginLeft: -6 }}>
+                <View style={styles.rateContainer}>
                     <StarRating
                         value={item.score}
                         half={true} size={18} spacing={12} readOnly
@@ -45,7 +45,7 @@ const InfoScreen = (props: any) => {
 
     return (
         <SafeAreaView style={styles.container}>
-            <RateStar value={user.score} ratings={user.rating} />
+            <RateStar value={4.7} ratings={128} />
             <FlatList
                 data={posts}
                 renderItem={renderItem}
